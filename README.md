@@ -14,7 +14,7 @@ You may need to create an sign into **Google Drive** and **Google Colaboratory**
 2. In the **Google Workspace Marketplace** search bar, type **Colaboratory**.
 3. Click on **Colaboratory** to install **Google Colaboratory**.
 4. Follow the installation instructions.
-5. From now on, when you sign in to **Google Drive** and click on **+ New** and then **More**, you will see an option to launch *Google Colabortory**.
+5. From now on, when you sign in to **Google Drive** and click on **+ New** and then **More**, you will see an option to launch **Google Colabortory**.
 
 
 ## Usage Instructions:

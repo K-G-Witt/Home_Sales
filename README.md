@@ -54,18 +54,12 @@ https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.2/22-big-d
 ### Compairing runtimes:
 * **Original:** 2.04 seconds.
 * **Cached:** 0.81 seconds.
-* Parquet and Partitioned:** 1.09 seconds.
+* **Parquet and Partitioned:** 1.09 seconds.
 
 
 ## Summary:
-As the 
+As the **home_sales_revised.csv** is not particularly large (2.6MB), consisting of 33,287 home sales (i.e., rows) and 11 features( e.g., columns), run times between the various approaches used in this project were not noticable. However, caching the table in memory did result in a significant improvement in run time, as would be expected.
 
 
 ## Credits:
-This code was compiled and written by me for the deep-learning-challenge project in the 2024 Data Analytics Boot Camp hosted by Monash University. Additional credits are declared below.
-
-### Saving model outputs as HDF5 file:
-https://www.tensorflow.org/tutorials/keras/save_and_load#hdf5_format (Accessed 22 July 2024).
-
-### keras tuner for auto-optimisation of model hyperparameters:
-https://keras.io/guides/keras_tuner/getting_started/ (Accessed 22 July 2024).
+This code was compiled and written by me for the home_sales project in the 2024 Data Analytics Boot Camp hosted by Monash University.

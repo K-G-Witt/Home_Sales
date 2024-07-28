@@ -46,10 +46,10 @@ https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.2/22-big-d
 ![screenshot_3](https://github.com/user-attachments/assets/d81fd329-934d-4846-92aa-f57b507d8ac6)
 
 
+4. The average price of a home per "view" rating for homes with an average home price greater than or equal to $350,000, rounded to two decimal places:
 
+![screenshot_4](https://github.com/user-attachments/assets/63152cf4-c7e9-4884-8402-92cc374f45ac)
 
-
-What is the average price of a home per "view" rating having an average home price greater than or equal to $350,000? Determine the run time for this query, and round off your answer to two decimal places.
 
 
 ### Compiling, Training, and Evaluating the Model"

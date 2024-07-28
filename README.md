@@ -36,9 +36,18 @@ https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.2/22-big-d
 ![screenshot_1](https://github.com/user-attachments/assets/3cd5a4bd-6391-496c-b939-c3b89d9d1204)
 
 
-What is the average price of a home for each year the home was built, that has three bedrooms and three bathrooms? Round off your answer to two decimal places.
+2. The average price of a home with three beedrooms and three bathrooms for each year the home was built, rounded to two decimal places:
 
-What is the average price of a home for each year the home was built, that has three bedrooms, three bathrooms, two floors, and is greater than or equal to 2,000 square feet? Round off your answer to two decimal places.
+![screenshot_2](https://github.com/user-attachments/assets/79b51609-582b-4897-83a9-c7bb325585bf)
+
+
+3. The average price of a home with three bedrooms, three bathrooms, two floors, and greater than or equal to 2,000 square feet for each year the home was built, rounded to two decimal places:
+
+![screenshot_3](https://github.com/user-attachments/assets/d81fd329-934d-4846-92aa-f57b507d8ac6)
+
+
+
+
 
 What is the average price of a home per "view" rating having an average home price greater than or equal to $350,000? Determine the run time for this query, and round off your answer to two decimal places.
 

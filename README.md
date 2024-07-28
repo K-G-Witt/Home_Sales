@@ -24,59 +24,23 @@ This repo contains the following:
 
 
 ## Overview of the Analysis:
-The overall purposes of this analysis is to understand whether a parsimonous model can be built to assist decision-makers within the Alphabet Soup Charity with classifying potential future applicants into those likely to successed in their ventures (i.e., successful; 1) or not (i.e., unsuccessful; 0). To assist with this, the Alphabet Soup Charity provided data on 34,000 organisations that have previously received funding, 18,261 (53.24%) of which were classified as successful (i.e., 1), and 16,038 (46.76%) of which were classified as unsuccessful (i.e., 0).   
+The overall purposes of this analysis is to use **SparkSQL** to determine key metrics about home sales data sourced from the following AWS S3 bucket:
+https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.2/22-big-data/home_sales_revised.csv
 
-Several potential predictors of funding success were also included in this training dataset:
-* **EIN** and **NAME:** identification columns;
-* **APPLICATION_TYPE:** Alphabet Soup application type;
-* **AFFILIATION:** affiliated sector of industry;
-* **CLASSIFICATION:** Government organisation classification;
-* **USE_CASE:** use case for funding;
-* **ORGANIZATION:** organisation type;
-* **STATUS:** active status;
-* **INCOME_AMT:** income classification;
-* **SPECIAL_CONSIDERATIONS:** special considerations for application;
-* **ASK_AMT:** funding amount requested;
-* **IS_SUCCESSFUL:** whether or not the money was used effectively, coded as 1 ("yes") or 0 ("no") (i.e., the target variable).
-
-### Initial Model:
-The following steps were used to build and evaluate the performance of the initial model:
-1. Read in the **charity_data.csv** to a Pandas DataFrame;
-2. Define the target variable (i.e., **IS_SUCCESSFUL**);
-3. Define the features variables (i.e., excluding the **IS_SUCCESSFUL** column);
-4. Drop the **EIN** and **NAME** columns to deidentify the dataset;
-5. Determine the number of unique values for each column;
-6. For columns that have more than 10 unique values, determine the number of data points for each unique value;
-7. Use the number of data points for each unique value to pick a cutoff point to combine "rare" categorical variables together in a new value, "Other";
-8. Use **pd.get_dummies() function** to encode categorical variables.
-9. Split the preprocessed data into a features array, X, and a target array, y;
-10. Use these arrays and the **train_test_split function** to split the data into training and testing datasets;
-11. Scale the training and testing features datasets by creating a **StandardScaler() function**, fitting it to the training data, then using the transformed function in subsequent steps.
-12. Create a neural network model by assigning the number of input features and nodes for each layer using **TensorFlow** and **Keras**;
-13. Create the first hidden layer using an appropriate activation function;
-14. If necessary, create a second hidden layer using an appropriate activation function;
-15. Create an output layer using an appropriate activation function;
-16. Check the structure of the model;
-17. Compile and train the model; 
-18. Create a callback that saves the initial model's weights every five epochs;
-19. Evaluate the model using the test data to determine the loss and accuracy, and;
-20. Save and export results to an HDF5 file, named **AlphabetSoupCharity.h5**.
-
-### Optimised Model:
-The following steps were used to build and evaluate the performance of the initial model:
-1. Follow Steps 1-11 as above;
-2. Using **keras-tuner** create an auto-optimiser function to determine the best combination of hidden layers (i.e., layers), neurons per layer (i.e., inputs), and activation furnctions (i.e., activations) (i.e., the hyperparameters), ranking these by their accuracy performance;
-3. Compile and train the model with the optimal combination of hyperparameters; 
-18. Create a callback that saves the optimised model's weights every five epochs;
-19. Evaluate the model using the test data to determine the loss and accuracy, and;
-20. Save and export results to an HDF5 file, named **AlphabetSoupCharity_Optimisation.h5**.
+**PySpark** was also used to create temporary table views, partition the data using parquet, cache and uncache a temporary table, and verify that the table has been uncached. These steps were undertaken to explore the effect these steps had on reducing processing time.
 
 
 ## Results:
-### Data Preprocessing:
-* Target variable: **IS_SUCCESSFUL:** indicates whether or not the money was used effectively, coded as 1 ("yes") or 0 ("no").
-* Features variables: listed within **Overview of the Analysis** section above.
-* Variables removed from the input data because they are neither targets nor features: **EIN** and **NAME**. 
+1. The average price for a four-bedroom house sold for each year, rounded to two decimal places:
+
+![screenshot_1](https://github.com/user-attachments/assets/3cd5a4bd-6391-496c-b939-c3b89d9d1204)
+
+
+What is the average price of a home for each year the home was built, that has three bedrooms and three bathrooms? Round off your answer to two decimal places.
+
+What is the average price of a home for each year the home was built, that has three bedrooms, three bathrooms, two floors, and is greater than or equal to 2,000 square feet? Round off your answer to two decimal places.
+
+What is the average price of a home per "view" rating having an average home price greater than or equal to $350,000? Determine the run time for this query, and round off your answer to two decimal places.
 
 
 ### Compiling, Training, and Evaluating the Model"

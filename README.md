@@ -3,7 +3,7 @@ The Home_Sales project aims to calucate average prices for of homes by build and
 
 
 ## Installation and Run Instructions:
-You may need to create an sign into **Google Drive** and **Google Colaboratory** before commencing:
+For this project, **Google Colaboratory** was used. Therefore, you may need to create and sign in to **Google Drive** and **Google Colaboratory** before commencing:
 
 ### Google Drive:
 1. In your browser, navigate to **drive.google.com**.

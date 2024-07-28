@@ -51,40 +51,14 @@ https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.2/22-big-d
 ![screenshot_4](https://github.com/user-attachments/assets/63152cf4-c7e9-4884-8402-92cc374f45ac)
 
 
-
-### Compiling, Training, and Evaluating the Model"
-* Number of neurons, layers, and activation functions used: detailed in the **Overall Model Performance** section separately for the initial model and the optimised model.
-* Ability to achieve the target model performance: as detained in the **Overal Model Performance** section, despite optimisation using **keras-tuner** the performance of the optimal model remained 73%, lower than the target model performance of 75%.
-* Steps taken to increase model performance: as detailed in the **Overal Model Performance** section, after optimisation the number of hidden layers was increased from 2 to 6, the number of neurons per layer was reduced from between 30-80 to between 5-9, and the activation functions were reduced in complexity from relu to sigmoid.
-
-
-### Overall Model Performance:
-#### Initial Model:
-The hyperparameters of the initial model are as follows:
-* Number of input features: len(X_train[0]);
-* Input layer: neurons = 80, activation function = relu;
-* Second hidden layer: neurons = 30, activation function = relu;
-* Output layer: neurons = 1, activation function = sigmoid.
-
-Overall, using these hyperparameters, the accuracy of the initial model is 0.73, indicating that it correctly classifies 73% of the instances.
-
-
-#### Optimised Model:
-The hyperparameters of the optimised model are as follows:
-* Number of input features: len(X_train[0]);
-* Input layer: neurons = 7, activation function = sigmoid;
-* Second hidden layer: neurons = 9, activation function = sigmoid;
-* Third hidden layer: neurons = 5, activation function = sigmoid;
-* Fourth hidden layer: neurons = 7, activation function = sigmoid;
-* Fifth hidden layer: neurons 9, activation function = sigmoid;
-* Sixth hidden layer: neurons = 9, activation function = sigmoid;
-* Output layer: neurons = 1, activation function = sigmoid.
-
-Overall, the accuracy of the optimised model is also 0.73, indicating that, despite tuning, the model still only correctly classifies 73% of the instances.
+### Compairing runtimes:
+* **Original:** 2.04 seconds.
+* **Cached:** 0.81 seconds.
+* Parquet and Partitioned:** 1.09 seconds.
 
 
 ## Summary:
-The optimised neural network model performs acceptably well in predicting successful grant applicants, with an the overall accuracy of 73%. However, despite auto-optimisation, the model performance remained at 73%, slightly lower than the target performance of 75%. Given this, it may be approriate to attempt classification using a more complex model, such as Random Forest. This method not only will help improve classificaiton accuracy, it may also help in the identification of which variables are explain the most or least in determining whether a funding applicant is likely to succeed in their venture or not.
+As the 
 
 
 ## Credits:
